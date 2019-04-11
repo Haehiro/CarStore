@@ -16,9 +16,9 @@ namespace CarStore.Models
         public CarsRepositoryMock()
         {
             _carList = new List<Car>{
-                new Car {Mark = "BMW", Model = "M3", Price = 200000 },
-                new Car { Mark = "Hundai", Model = "Solaris", Price = 500000 },
-                new Car { Mark = "Vaz", Model = "2109", Price = 100000 }
+                new Car {Id = 1, Mark = "BMW", Model = "M3", Price = 200000 },
+                new Car {Id = 2, Mark = "Hundai", Model = "Solaris", Price = 500000 },
+                new Car { Id = 3, Mark = "Vaz", Model = "2109", Price = 100000 }
             };
             
         }
