@@ -14,9 +14,9 @@ namespace CarStore.Infrastructure
     {
         private IKernel kernel;
 
-        public NinjectDependencyResolver(IKernel kernelparam)
+        public NinjectDependencyResolver(IKernel kernelParam)
         {
-            kernel = kernelparam;
+            kernel = kernelParam;
             AddBindings();
         }
 
