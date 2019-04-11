@@ -9,6 +9,7 @@ using System.Web;
 
 namespace CarStore.App_Start
 {
+    
     public static class NinjectWebCommon
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -42,9 +43,7 @@ namespace CarStore.App_Start
                 throw;
             }
         }
-
-
-
+               
         public static void RegisterServices(IKernel kernel)
         {
             System.Web.Mvc.DependencyResolver.SetResolver(new CarStore.Infrastructure.NinjectDependencyResolver(kernel));
