@@ -23,6 +23,7 @@ namespace CarStore.Infrastructure
             //    new Car { Mark = "Vaz", Model = "2109", Price = 100000 }
             //});
             Bind<ICarRepository>().ToConstant(mock.Object);
+            //Bind<ICarRepository>().To<CarsRepositoryMock>();
         }
 
         public override void Load()

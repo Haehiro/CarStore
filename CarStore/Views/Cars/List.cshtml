@@ -10,8 +10,8 @@
 <div>
     <h3>@car.Mark</h3>
     <p>@car.Model</p>
-    <h4>@car.Price.ToString("# руб") </h4>
-    @Html.ActionLink("Edit", "Edit", new { id = car.Id }) |@Html.ActionLink("Details", "Details", new { id = car.Id }) |@Html.ActionLink("Delete", "Delete", new { id = car.Id })
+    <h4>@car.Price руб </h4>
+    @Html.ActionLink("Edit", "Edit", new { id = car.Id }) |@Html.ActionLink("Details", "Details", new { id = car.Id }) |@Html.ActionLink("Delete", "Delete", new { id = car.Id }) |@Html.ActionLink("Create", "Create", new { id = car.Id })
 </div>
 
     <hr />

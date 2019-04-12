@@ -10,11 +10,11 @@ namespace Domain.Entities
     public class Car
     {
         public int Id { get; set; }
-        [Display(Name = "Марка")]
+        
         public string Mark { get; set; }
-        [Display(Name = "Модель")]
+       
         public string Model { get; set; }
-        [Display(Name = "Цена")]
-        public decimal Price { get; set; }
+        
+        public decimal? Price { get; set; }
     }
 }

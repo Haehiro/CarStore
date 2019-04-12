@@ -13,12 +13,22 @@ namespace CarStore.Models
 
         private List<Car> _carList;
 
+        private int _carSequence;
+
+        public int CarSequence
+        {
+            
+            get { return _carSequence++; }
+            
+        }
+
         public CarsRepositoryMock()
         {
+                       
             _carList = new List<Car>{
-                new Car {Id = 1, Mark = "BMW", Model = "M3", Price = 200000 },
-                new Car {Id = 2, Mark = "Hundai", Model = "Solaris", Price = 500000 },
-                new Car { Id = 3, Mark = "Vaz", Model = "2109", Price = 100000 }
+                new Car {Id = CarSequence, Mark = "BMW", Model = "M3", Price = 200000 },
+                new Car {Id = CarSequence, Mark = "Hundai", Model = "Solaris", Price = 500000 },
+                new Car {Id = CarSequence, Mark = "Vaz", Model = "2109", Price = 100000 }
             };
             
         }
@@ -26,8 +36,9 @@ namespace CarStore.Models
 
         public int Create(Car value)
         {
+            value.Id = CarSequence;
             _carList.Add(value);
-            return _carList.IndexOf(value);
+            return value.Id;
         }
 
         public bool Delete(int id)
@@ -47,6 +58,8 @@ namespace CarStore.Models
 
             return true;
         }
+
+  
 
         public Car GetById(int id)
         {

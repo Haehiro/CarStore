@@ -70,7 +70,7 @@ namespace CarStore.Controllers
             {
                 repository.Edit(id, car);
               
-                return RedirectToAction("Index");
+                return RedirectToAction("List");
             }
             catch
             {
